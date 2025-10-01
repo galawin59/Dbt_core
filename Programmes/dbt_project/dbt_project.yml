@@ -1,0 +1,15 @@
+# dbt_project.yml
+name: 'dbt_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'snowflake_profile'
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  dbt_project:
+    +materialized: view
